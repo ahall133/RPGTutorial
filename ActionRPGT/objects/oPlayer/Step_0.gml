@@ -11,11 +11,10 @@ inputDirection = point_direction(0, 0, keyRight-keyLeft, keyDown-keyUp);
 inputMagnitude = (keyRight-keyLeft != 0) or (keyDown-keyUp != 0);
 
 //movement
-hspeed = lengthdir_x(inputMagnitude*speedWalk, inputDirection);
-vspeed = lengthdir_y(inputMagnitude*speedWalk, inputDirection);
+hSpeed = lengthdir_x(inputMagnitude*speedWalk, inputDirection);
+vSpeed = lengthdir_y(inputMagnitude*speedWalk, inputDirection);
 
-x += hspeed
-y += vspeed
+PlayerCollision();
 
 //update sprite index
 var _oldSprite = sprite_index;
